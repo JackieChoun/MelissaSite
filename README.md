@@ -1,3 +1,5 @@
+Site vitrine de Melissa Laroueg fait par Mehdi de Viguerie avec Astro, Tailwind et JavaScript.
+
 # Astro Starter Kit: Minimal
 
 ```sh
