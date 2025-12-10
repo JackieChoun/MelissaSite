@@ -1,10 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import botticeli from "../images/botticelli.jpg";
+import klimt from "../images/klimt.jpg";
+import rodin from "../images/rodin.jpg";
+import melissa from "../images/melissa.jpg";
 ---
 
 <Layout title="Thérapie Philosophique à Toulouse">
   <section
-    class="flex flex-col justify-center h-dvh gap-5 font-playfair text-tertiary scroll-mt-20"
+    class="flex flex-col justify-center h-dvh gap-5 font-playfair text-tertiary scroll-mt-20 container"
     id="accueil"
   >
     <h1 class="text-4xl font-medium">Melissa Laroueg</h1>
@@ -14,15 +19,29 @@ import Layout from "../layouts/Layout.astro";
     <h3 class="text-2xl font-medium pl-10 pt-10">
       "Philosopher, c'est bon pour la santé."
     </h3>
-    <h3 class="text-2xl font-medium justify-end flex">
-      Melissalaroueg@gmail.com <br /> 27 rue d’Alsace-Lorraine <br /> 07.60.28.72.70
-    </h3>
+    <div class="text-2xl font-medium justify-end flex">
+      <div class="flex flex-col">
+        <a href="mailto:Melissalaroueg@gmail.com" class="hover:underline">
+          Melissalaroueg@gmail.com
+        </a>
+
+        <a
+          href="https://maps.google.com/?q=27+Rue+d'Alsace+Lorraine,+31000+Toulouse"
+          target="_blank"
+          class="hover:underline"
+        >
+          27 rue d’Alsace-Lorraine
+        </a>
+
+        <a href="tel:+33760287270" class="hover:underline"> 07.60.28.72.70 </a>
+      </div>
+    </div>
   </section>
-  <section class="h-dvh scroll-mt-20" id="presentation">
-    <h1 class="font-playfair text-4xl font-medium text-secondary pb-4">
+  <section class="h-dvh scroll-mt-20 container" id="presentation">
+    <h1 class="font-playfair text-4xl font-medium text-secondary pb-3">
       Présentation
     </h1>
-    <div class="grid-cols-3 pb-10 grid gap-4">
+    <div class="grid-cols-3 grid gap-5">
       <p
         class="bg-tertiary/90 text-white font-light p-5 font-opensans col-span-2 text-justify"
       >
@@ -62,12 +81,215 @@ import Layout from "../layouts/Layout.astro";
         de soi-même, et donne ainsi du sens, et du corps à l’existence. C’est en
         ce sens qu’il a un pouvoir thérapeutique.
       </p>
-      <img
-        src="public/melissa.jpg"
+      <Image
+        src={melissa}
         alt="Melissa Laroueg"
         title="Moi"
         class="col-span-1 object-cover h-full w-full"
       />
     </div>
   </section>
+  <section class="h-auto scroll-mt-20 container" id="consultations">
+    <h1 class="font-playfair text-4xl font-medium text-secondary pb-3">
+      Consultations
+    </h1>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 pb-10">
+      <!-- Card 1 -->
+      <div class="col-span-1">
+        <Image
+          src={klimt}
+          alt="tableau de Klimt"
+          title="Athena de Klimt"
+          class="w-full aspect-square object-cover mb-3 hover:scale-105 transition-transform duration-300"
+        />
+
+        <div class="bg-tertiary/90 text-white">
+          <h2 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
+            Supervision
+          </h2>
+
+          <details class="group">
+            <summary
+              class="flex cursor-pointer items-end justify-center [&_::-webkit-details-marker]:hidden"
+            >
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-justify">
+                Professionnels de la thérapie, vous connaissez la théorie de
+                votre pratique et sa déontologie, et vous êtes engagés à la
+                respecter pour la santé de votre patient, ainsi que la vôtre,
+                capitale au sein de votre exercice.<br />
+                Malgré la rigueur de votre effort, travailler avec la subjectivité
+                peut entraîner des questionnements problématiques, que la théorie
+                seule peut ne pas suffire à démêler, et vous laisser seul face à
+                votre cas de conscience. Le dialogue philosophique, avant d’être
+                une perspective, est d’abord un dialogue exigeant, à la hauteur de
+                la complexité de votre expertise, et dont les fondements scientifiques
+                sont dévolus à la recherche de l’angle mort, et à l’aboutissement
+                d’un raisonnement fécond.<br />
+                Si la mission du clinicien est de respecter la subjectivité, l’altérité,
+                l’autonomie du sujet, il doit sans cesse écarteler le champ de sa
+                perception pour ne pas réduire l’autre à la représentation qu’il
+                s’en fait. Les outils méthodologiques, sémantiques et épistémologiques
+                de la philosophie peuvent soutenir la Clinique.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-span-1">
+        <Image
+          src={rodin}
+          alt="le penseur de Rodin"
+          title="Le penseur de Rodin"
+          class="w-full aspect-square object-cover mb-3 hover:scale-105 transition-transform duration-300"
+        />
+
+        <div class="bg-secondary/90 text-white">
+          <h2 class="font-playfair text-3xl font-medium px-5 pt-1 h-[9vh]">
+            Entretiens Philosophiques à visée thérapeutique
+          </h2>
+
+          <details class="group">
+            <summary
+              class="flex cursor-pointer justify-center [&_::-webkit-details-marker]:hidden"
+            >
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-justify">
+                Dans sa tradition antique, la philosophie ne considère pas la
+                souffrance comme une maladie, mais comme une occasion de
+                travailler sur soi et d’apprendre à se connaître, pour savoir
+                comment se respecter, et construire des principes de vie à la
+                fois authentiques et compatibles à l’existence.<br />
+                C’est cela, construire une éthique, en philosophie, et cela permet
+                d’éviter les souffrances inutiles, de dépasser les autres, et d’en
+                tirer parti. Un travail philosophique n’empêche pas de sortir de
+                sa zone de confort quand c’est un choix averti, mais elle encourage
+                d’abord à la construire, pour savoir où rentrer quand on s’est égaré
+                loin de chez soi, et optimiser les voyages. <br />
+                Loin des clichés de la philosophie comme dissertation interminable
+                et inutile, le dialogue socratique et des outils bien choisis de
+                la philosophie peuvent offrir un espace de confidence, mettre ses
+                idées en ordre dans la sécurité du huis-clos, et mieux construire
+                le sens de sa vie à partir de son expérience.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-span-1">
+        <Image
+          src={botticeli}
+          alt="tableau de Botticelli"
+          title="La calomnie d'Apelle de Botticelli"
+          class="w-full aspect-square object-cover mb-3 hover:scale-105 transition-transform duration-300"
+        />
+
+        <div class="bg-tertiary/90 text-white">
+          <h2 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
+            Intervention en entreprise
+          </h2>
+
+          <details class="group">
+            <summary
+              class="flex cursor-pointer justify-center [&_::-webkit-details-marker]:hidden"
+            >
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-justify">
+                Nous parlons de la même chose avec des mots différents, connotés
+                de différentes subtilités, et nous ne nous comprenons pas. C’est
+                un dialogue de sourd qui, de part les affects investis, mène
+                chaque partie prenante à conclure que l’autre ne veut pas
+                l’entendre, jusqu’à ce que l’épuisement abolisse toute forme de
+                précautions à l’autre, en direction du conflit.<br />
+                La politique en est le meilleur exemple: lorsque la droite parle
+                de taxe, la gauche parle de solidarité. Quand la gauche parle de
+                solidarité, la droite parle de injustice vis-à-vis du mérite. L’un
+                parle de cotisation à l’intérêt général, l’autre de confiscation
+                arbitraire.<br />
+                Derrière l’apparence des mots, le travail du philosophe est de capter
+                les principes communs qui, derrière des apparences opposées, peuvent
+                réparer le dialogue entre des parties, toutes différentes soient-elles.
+                80% des conflits en entreprises n’ont pas de causes profondes, c’est
+                la forme qui les génère.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="w-full bg-tertiary h-1/3">
+    <h1 class="text-center text-4xl text-white font-medium font-playfair py-5">
+      Contactez-moi
+    </h1>
+    <p class="text-center text-white font-light font-opensans">
+      N’hésitez pas à réserver un créneau, je répondrai à toutes vos questions
+      avec plaisir.
+    </p>
+    <div class="text-center border-secondary py-10">
+      <a
+        href="mailto:Melissalaroueg@gmail.com"
+        class="px-15 py-3 bg-secondary text-white border-primary hover:bg-secondary/50 border-2 font-medium font-opensans transition-colors duration-300"
+      >
+        Prendre rendez-vous
+      </a>
+    </div>
+  </section>
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.200870868313!2d1.4425952758380085!3d43.6023590557182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aebc9da6e88c99%3A0xbafd1a33c1ea9fa!2s27%20Rue%20d'Alsace%20Lorraine%2C%2031000%20Toulouse!5e0!3m2!1sfr!2sfr!4v1765366854864!5m2!1sfr!2sfr"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    class="w-full h-60"
+  >
+  </iframe>
 </Layout>

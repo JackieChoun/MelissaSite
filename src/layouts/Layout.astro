@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import Header from "../layouts/Header.astro";
+import Footer from "../layouts/Footer.astro";
 const {
   title = "",
   description = "Bienvenue sur le site de Melissa Laroueg, thérapeute et philosophe",
@@ -24,9 +25,68 @@ const fullTitle = `Melissa Laroueg  ${title}`;
       class="bg-[url('/public/imagefond.png')] bg-center bg-no-repeat bg-fixed bg-size-[72%] relative"
     >
       <div class="absolute inset-0 bg-primary/20"></div>
-      <div class="relative container">
+      <div class="relative">
         <slot />
       </div>
     </main>
+    <Footer />
   </body>
 </html>
+
+<script>
+  // Gestion du menu de navigation pour souligner la section active
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll("nav a[data-link]");
+
+  function onScroll() {
+    let current = "";
+
+    sections.forEach((section) => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 150 && rect.bottom >= 150) {
+        current = section.id;
+      }
+    });
+
+    const navLinks = document.querySelectorAll<HTMLAnchorElement>("nav a");
+
+    navLinks.forEach((link) => {
+      link.classList.remove("underline");
+      if (link.dataset.link === current) {
+        link.classList.add("underline");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll(); // pour le premier chargement
+
+  // Gestion de l'accordéon pour n'ouvrir qu'une seule card à la fois
+  document.addEventListener("DOMContentLoaded", () => {
+    const allDetails = document.querySelectorAll("details");
+
+    allDetails.forEach((details) => {
+      details.addEventListener("toggle", () => {
+        if (details.open) {
+          // Fermer toutes les autres cards
+          allDetails.forEach((other) => {
+            if (other !== details && other.open) {
+              other.open = false;
+            }
+          });
+
+          // Scroll automatique vers la partie texte
+          const content = details.querySelector("div"); // première div interne
+          if (content) {
+            setTimeout(() => {
+              content.scrollIntoView({
+                behavior: "smooth",
+                block: "end",
+              });
+            }, 100); // délai pour laisser l'animation s'ouvrir
+          }
+        }
+      });
+    });
+  });
+</script>
