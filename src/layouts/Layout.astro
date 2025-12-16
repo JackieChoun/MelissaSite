@@ -5,6 +5,7 @@ import Footer from "../layouts/Footer.astro";
 const {
   title = "",
   description = "Bienvenue sur le site de Melissa Laroueg, thérapeute et philosophe",
+  withBgImage = true,
 } = Astro.props;
 
 const fullTitle = `Melissa Laroueg  ${title}`;
@@ -22,7 +23,9 @@ const fullTitle = `Melissa Laroueg  ${title}`;
   <body class="bg-primary">
     <Header />
     <main
-      class="bg-[url('/public/imagefond.png')] bg-center bg-no-repeat bg-fixed bg-size-[72%] relative"
+      class={withBgImage
+        ? "bg-[url('/public/imagefond.png')] bg-center bg-no-repeat bg-fixed bg-size-[72%] relative"
+        : "relative"}
     >
       <div class="absolute inset-0 bg-primary/20"></div>
       <div class="relative">
