@@ -20,14 +20,14 @@ const fullTitle = `Melissa Laroueg  ${title}`;
     <meta name="description" content={description} />
     <title>{fullTitle}</title>
   </head>
-  <body class="bg-primary">
+  <body class="bg-primary pt-20">
     <Header />
     <main
       class={withBgImage
-        ? "bg-[url('/public/imagefond.png')] bg-center bg-no-repeat bg-fixed bg-size-[72%] relative"
+        ? "md:bg-[url('/public/imagefond.png')] md:bg-center md:bg-no-repeat md:bg-fixed md:bg-size-[72%] md:relative"
         : "relative"}
     >
-      <div class="absolute inset-0 bg-primary/20"></div>
+      <div class="md:absolute md:inset-0 md:bg-primary/20"></div>
       <div class="relative">
         <slot />
       </div>
