@@ -92,4 +92,19 @@ const fullTitle = `Melissa Laroueg  ${title}`;
       });
     });
   });
+
+  // Gestion de l'affichage du logo dans le header au scroll sur mobile
+  const headerBrand = document.getElementById("header-brand");
+
+  if (headerBrand instanceof HTMLElement && window.innerWidth < 768) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 150) {
+        headerBrand.classList.remove("opacity-0", "-translate-y-2");
+        headerBrand.classList.add("opacity-100", "translate-y-0");
+      } else {
+        headerBrand.classList.add("opacity-0", "-translate-y-2");
+        headerBrand.classList.remove("opacity-100", "translate-y-0");
+      }
+    });
+  }
 </script>
