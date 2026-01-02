@@ -7,15 +7,15 @@ import Layout from "../layouts/Layout.astro";
   title=" - Contact"
   description="Contactez Melissa Laroueg pour prendre rendez-vous"
 >
-  <section class="w-full bg-secondary h-[45vh] container flex items-end">
-    <h1 class="text-5xl text-white font-medium font-playfair pb-20">
+  <section class="w-full bg-secondary md:h-[45vh] container flex items-end">
+    <h1
+      class="md:text-5xl text-3xl text-white font-medium font-playfair pb-20 pt-5 md:pt-0"
+    >
       Prendre rendez-vous
     </h1>
   </section>
-  <section class="container my-5 flex">
-    <p
-      class="text-3xl font-open-sans mr-5 text-justify font-normal flex items-center"
-    >
+  <section class="container my-5 md:flex">
+    <p class="md:text-3xl text-xl font-open-sans mr-5 text-justify font-normal">
       “Philosopher, c’est bon pour la santé.<br />
       Il n’y a pas que la maladie qui fait souffrir: le doute, l’échec, les relations,
       les émotions, les événements les plus ordinaires de la vie peuvent générer de
@@ -24,19 +24,47 @@ import Layout from "../layouts/Layout.astro";
       de la discipline peuvent offrir un espace de confidence, mettre de l’ordre dans
       ses idées, et mieux construire le sens de sa vie à partir de son expérience.”
     </p>
-    <img src="public/cabinet.jpg" alt="cabinet" class="w-[40vw] h-auto" />
+    <img
+      src="public/cabinet.jpg"
+      alt="cabinet"
+      class="md:w-[40vw] rounded-xl md:rounded-none h-auto mt-5 md:mt-0"
+    />
   </section>
-  <section class="text-center text-5xl font-playfair">
+  <!-- <section class="container my-5 md:flex md:items-start md:gap-5">
+    <img
+      src="/public/cabinet.jpg"
+      alt="cabinet"
+      class="w-60
+      float-left
+      mr-2
+      rounded-xl
+      md:float-none
+      md:rounded-none
+      md:w-[40vw]"
+    />
+
+    <p class="md:text-3xl text-xl font-open-sans text-justify font-normal">
+      “Philosopher, c’est bon pour la santé.<br />
+      Il n’y a pas que la maladie qui fait souffrir: le doute, l’échec, les relations,
+      les émotions, les événements les plus ordinaires de la vie peuvent générer de
+      grandes confusions. Loin des clichés de la philosophie comme une dissertation
+      interminable et inutile, le dialogue socratique, et des outils bien choisis
+      de la discipline peuvent offrir un espace de confidence, mettre de l’ordre dans
+      ses idées, et mieux construire le sens de sa vie à partir de son expérience.”
+    </p>
+  </section> -->
+
+  <section class="text-center text-2xl md:text-5xl font-playfair">
     <p class="text-tertiary pt-10 font-medium">Par téléphone</p>
     <a href="tel:+33760287270" class="hover:underline"> 07.60.28.72.70 </a>
     <p class="text-tertiary pt-10 font-medium">Par mail</p>
-    <a href="mailto:Melissalaroueg@gmail.com" class="hover:underline">
+    <a href="mailto:Melissalaroueg@gmail.com" class="md:hover:underline">
       Melissalaroueg@gmail.com
     </a>
     <p class="text-tertiary pt-10 font-medium">Le cabinet</p>
-    <p class="pt-5">27 rue d’Alsace-Lorraine, 31000 Toulouse</p>
+    <p class="">27 rue d’Alsace-Lorraine, 31000 Toulouse</p>
   </section>
-  <div class="relative w-full h-[60vh] py-10 container">
+  <div class="relative w-full h-[60vh] py-10 md:container">
     <iframe
       src="https://www.google.com/maps?q=27+Rue+d'Alsace+Lorraine,+31000+Toulouse&output=embed"
       allowfullscreen=""
