@@ -4,11 +4,13 @@ import Header from "../layouts/Header.astro";
 import Footer from "../layouts/Footer.astro";
 const {
   title = "",
-  description = "Bienvenue sur le site de Melissa Laroueg, thérapeute et philosophe",
+  description = "Psychothérapie philosophique à Toulouse avec Melissa Laroueg. Accompagnement en cabinet ou à distance.",
   withBgImage = true,
 } = Astro.props;
 
-const fullTitle = `Melissa Laroueg  ${title}`;
+const fullTitle = title
+  ? `${title} – Melissa Laroueg`
+  : "Melissa Laroueg – Psychothérapie philosophique à Toulouse";
 ---
 
 <html lang="fr">

@@ -1,72 +1,60 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import cabinet from "../images/cabinet.jpg";
 ---
 
 <Layout
   withBgImage={false}
-  title=" - Contact"
-  description="Contactez Melissa Laroueg pour prendre rendez-vous"
+  title="Contact pour prendre rendez-vous"
+  description="Prenez rendez-vous avec Melissa Laroueg, psychothérapeute philosophique à Toulouse. Consultations au cabinet ou par vidéoconférence"
 >
   <section class="w-full bg-secondary md:h-[45vh] container flex items-end">
     <h1
       class="md:text-5xl text-3xl text-white font-medium font-playfair pb-20 pt-5 md:pt-0"
     >
-      Prendre rendez-vous
+      Prendre rendez-vous <br />
+      <span class="sr-only">
+        avec Melissa Laroueg, philosophe thérapeutique à Toulouse
+      </span>
     </h1>
   </section>
   <section class="container my-5 md:flex">
     <p class="md:text-3xl text-xl font-open-sans mr-5 text-justify font-normal">
-      “Philosopher, c’est bon pour la santé.<br />
+      “<span class="italic">Philosopher, c’est bon pour la santé.</span><br />
       Il n’y a pas que la maladie qui fait souffrir: le doute, l’échec, les relations,
       les émotions, les événements les plus ordinaires de la vie peuvent générer de
-      grandes confusions. Loin des clichés de la philosophie comme une dissertation
+      grandes confusions.<br /> Loin des clichés de la philosophie comme une dissertation
       interminable et inutile, le dialogue socratique, et des outils bien choisis
       de la discipline peuvent offrir un espace de confidence, mettre de l’ordre dans
       ses idées, et mieux construire le sens de sa vie à partir de son expérience.”
     </p>
-    <img
-      src="public/cabinet.jpg"
-      alt="cabinet"
+    <Image
+      src={cabinet}
+      title="Le cabinet"
+      alt="Cabinet de consultation de Melissa Laroueg à Toulouse"
+      loading="eager"
+      fetchpriority="high"
       class="md:w-[40vw] rounded-xl md:rounded-none h-auto mt-5 md:mt-0"
     />
   </section>
-  <!-- <section class="container my-5 md:flex md:items-start md:gap-5">
-    <img
-      src="/public/cabinet.jpg"
-      alt="cabinet"
-      class="w-60
-      float-left
-      mr-2
-      rounded-xl
-      md:float-none
-      md:rounded-none
-      md:w-[40vw]"
-    />
-
-    <p class="md:text-3xl text-xl font-open-sans text-justify font-normal">
-      “Philosopher, c’est bon pour la santé.<br />
-      Il n’y a pas que la maladie qui fait souffrir: le doute, l’échec, les relations,
-      les émotions, les événements les plus ordinaires de la vie peuvent générer de
-      grandes confusions. Loin des clichés de la philosophie comme une dissertation
-      interminable et inutile, le dialogue socratique, et des outils bien choisis
-      de la discipline peuvent offrir un espace de confidence, mettre de l’ordre dans
-      ses idées, et mieux construire le sens de sa vie à partir de son expérience.”
-    </p>
-  </section> -->
 
   <section class="text-center text-2xl md:text-5xl font-playfair">
-    <p class="text-tertiary pt-10 font-medium">Par téléphone</p>
-    <a href="tel:+33760287270" class="hover:underline"> 07.60.28.72.70 </a>
-    <p class="text-tertiary pt-10 font-medium">Par mail</p>
-    <a href="mailto:Melissalaroueg@gmail.com" class="md:hover:underline">
-      Melissalaroueg@gmail.com
-    </a>
-    <p class="text-tertiary pt-10 font-medium">Le cabinet</p>
-    <p class="">27 rue d’Alsace-Lorraine, 31000 Toulouse</p>
+    <address class="not-italic">
+      <p class="text-tertiary pt-10 font-medium">Par téléphone</p>
+      <a href="tel:+33760287270" class="hover:underline"> 07.60.28.72.70 </a>
+      <p class="text-tertiary pt-10 font-medium">Par mail</p>
+      <a href="mailto:Melissalaroueg@gmail.com" class="md:hover:underline">
+        Melissalaroueg@gmail.com
+      </a>
+      <p class="text-tertiary pt-10 font-medium">Le cabinet</p>
+      <p class="">27 rue d’Alsace-Lorraine, 31000 Toulouse</p>
+    </address>
   </section>
   <div class="relative w-full h-[60vh] py-10 md:container">
     <iframe
       src="https://www.google.com/maps?q=27+Rue+d'Alsace+Lorraine,+31000+Toulouse&output=embed"
+      title="Map gps - adresse de Melissa Laroueg pour consultation"
       allowfullscreen=""
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"

@@ -7,14 +7,20 @@ import rodin from "../images/rodin.jpg";
 import melissa from "../images/melissa.jpg";
 ---
 
-<Layout title="Thérapie Philosophique à Toulouse">
+<Layout
+  description="Psychothérapie philosophique à Toulouse avec Melissa Laroueg. Consultations individuelles, supervision et interventions en entreprise."
+>
   <section
     class="flex flex-col justify-center items-center md:items-stretch md:min-h-dvh h-auto gap-5 font-playfair text-tertiary scroll-mt-20 container"
     id="accueil"
   >
     <div class="py-50 md:py-0 flex items-center">
       <img src="logo2.svg" alt="" class="h-16 w-auto md:hidden" />
-      <h1 class="lg:text-4xl font-medium text-xl">Melissa Laroueg</h1>
+      <h1 class="lg:text-4xl font-medium text-xl">
+        Melissa Laroueg <span class="sr-only">
+          Philosophe thérapeutique à Toulouse
+        </span>
+      </h1>
     </div>
     <h2 class="lg:text-3xl font-medium text-xl">
       Philosophe Thérapeutique <br />
@@ -26,7 +32,7 @@ import melissa from "../images/melissa.jpg";
     <div
       class="lg:text-2xl text-lg text-center font-medium md:justify-end flex md:text-left"
     >
-      <div class="flex flex-col">
+      <address class="flex flex-col not-italic">
         <a href="mailto:Melissalaroueg@gmail.com" class="hover:underline">
           Melissalaroueg@gmail.com
         </a>
@@ -40,15 +46,15 @@ import melissa from "../images/melissa.jpg";
         </a>
 
         <a href="tel:+33760287270" class="hover:underline"> 07.60.28.72.70 </a>
-      </div>
+      </address>
     </div>
   </section>
   <section class="scroll-mt-20 container" id="presentation">
-    <h1
+    <h2
       class="font-playfair text-center md:text-left text-2xl lg:text-4xl font-medium text-secondary pb-3 pt-5 md:pt-0"
     >
       Présentation
-    </h1>
+    </h2>
     <div class="md:grid-cols-3 grid gap-5">
       <Image
         src={melissa}
@@ -98,25 +104,25 @@ import melissa from "../images/melissa.jpg";
     </div>
   </section>
   <section class="h-auto scroll-mt-20 pt-5 container" id="consultations">
-    <h1 class="font-playfair text-4xl font-medium text-secondary pb-3">
+    <h2 class="font-playfair text-4xl font-medium text-secondary pb-3">
       Consultations
-    </h1>
+    </h2>
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 pb-10">
       <!-- Card 1 -->
       <div class="col-span-1">
         <Image
           src={klimt}
-          alt="tableau de Klimt"
-          title="Athena de Klimt"
+          alt="tableau de Gustav Klimt illustrant Athena et la philosophie dans la supervision"
+          title="Athena de Gustav Klimt"
           class="w-full aspect-square object-cover mb-3 rounded-xl md:rounded-none"
         />
 
         <div
           class="bg-tertiary/90 text-white md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none"
         >
-          <h2 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
+          <h3 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
             Supervision
-          </h2>
+          </h3>
 
           <details class="group">
             <summary
@@ -167,16 +173,16 @@ import melissa from "../images/melissa.jpg";
         <Image
           src={rodin}
           alt="le penseur de Rodin"
-          title="Le penseur de Rodin"
+          title="Le Penseur de Rodin, symbole de la pensée philosophique"
           class="w-full aspect-square object-cover mb-3 rounded-xl md:rounded-none"
         />
 
         <div
           class="bg-secondary/90 text-white md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none"
         >
-          <h2 class="font-playfair text-3xl font-medium px-5 pt-1 h-[9vh]">
+          <h3 class="font-playfair text-3xl font-medium px-5 pt-1 h-[9vh]">
             Entretiens Philosophiques à visée thérapeutique
-          </h2>
+          </h3>
 
           <details class="group">
             <summary
@@ -225,7 +231,7 @@ import melissa from "../images/melissa.jpg";
       <div class="col-span-1">
         <Image
           src={botticeli}
-          alt="tableau de Botticelli"
+          alt="Tableau de Botticelli illustrant le jugement moral"
           title="La calomnie d'Apelle de Botticelli"
           class="w-full aspect-square object-cover mb-3 rounded-xl md:rounded-none"
         />
@@ -233,9 +239,9 @@ import melissa from "../images/melissa.jpg";
         <div
           class="bg-tertiary/90 text-white md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none"
         >
-          <h2 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
+          <h3 class="font-playfair text-3xl font-medium pl-5 pt-1 h-[9vh]">
             Intervention en entreprise
-          </h2>
+          </h3>
 
           <details class="group">
             <summary
@@ -283,11 +289,11 @@ import melissa from "../images/melissa.jpg";
   <section
     class="w-full bg-tertiary md:h-[35vh] flex flex-col justify-center container"
   >
-    <h1
+    <h2
       class="text-center text-3xl md:text-4xl text-white font-medium font-playfair py-5"
     >
       Contactez-moi
-    </h1>
+    </h2>
     <p class="text-center text-white font-light font-opensans">
       N’hésitez pas à réserver un créneau, je répondrai à toutes vos questions
       avec plaisir.
@@ -304,6 +310,7 @@ import melissa from "../images/melissa.jpg";
   <div class="relative w-full h-[30vh]">
     <iframe
       src="https://www.google.com/maps?q=27+Rue+d'Alsace+Lorraine,+31000+Toulouse&output=embed"
+      title="Map gps - adresse de Melissa Laroueg pour consultation"
       class="w-full h-full"
       loading="lazy"
       referrerpolicy="no-referrer-when-downgrade"></iframe>
