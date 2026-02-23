@@ -1,0 +1,250 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import melissa from '../images/melissa.jpg';
+import cabinet from '../images/cabinet.jpg';
+---
+
+<Layout
+  description="Psychothérapie philosophique à Toulouse avec Melissa Laroueg. Consultations individuelles, supervision et interventions en entreprise."
+>
+  <section id="accueil" class="scroll-mt-20 md:h-dvh overflow-hidden flex flex-col">
+    <div class="flex justify-center pt-5 shrink-0">
+      <!-- <img src="logo.svg" alt="" class="h-16 w-auto md:hidden" /> -->
+      <h1
+        class="relative text-3xl lg:text-7xl font-medium text-center
+      after:content-[''] after:absolute after:left-0 after:-bottom-10
+      after:w-full after:h-0.75 after:bg-linear-to-r
+      after:from-transparent after:via-black/20 after:to-transparent"
+      >
+        Consultations <br class="lg:hidden" /> Philosophiques
+      </h1>
+    </div>
+
+    <h2 class="text-2xl font-medium italic text-center pt-20 shrink-0">
+      La philosophie pour comprendre.
+    </h2>
+
+    <div class="text-center py-10 shrink-0">
+      <a
+        href="contact"
+        class="px-15 py-3 bg-tertiary text-white hover:bg-tertiary/70 font-medium rounded-md text-lg font-opensans transition-colors duration-300 shadow-md shadow-[rgba(0,0,0,0.7)]"
+      >
+        Me contacter
+      </a>
+    </div>
+    <div class="flex-1 min-h-0 overflow-hidden">
+      <Image
+        src={cabinet}
+        alt="Cabinet de Melissa Laroueg"
+        title="Cabinet"
+        class="md:w-full md:h-full md:object-cover md:object-bottom h-auto w-auto"
+      />
+    </div>
+  </section>
+
+  <section class="h-auto scroll-mt-20 pt-20 container" id="consultations">
+    <h2 class="text-center md:text-left text-3xl lg:text-4xl font-medium text-secondary pb-5">
+      Consultations
+    </h2>
+    <p class="font-medium text-lg text-center md:text-justify hyphens-auto text-secondary">
+      La consultation philosophique est un espace confidentiel de clarification de la perception. Le
+      philosophe praticien est un interlocuteur averti qui accompagne le développement de votre
+      questionnement de façon constructive, et qui ne cherchera pas à l’interrompre. Son travail est
+      de tutorer le raisonnement afin qu’il s’éclaircisse, s’organise, et aboutisse à du sens, et
+      une meilleure appréhension des perspectives possibles. Il utilise pour cela les outils de
+      réflexion traditionnels de sa discipline, rigoureusement et sans jugement.
+    </p>
+    <br />
+    <p class="font-bold text-xl italic py-5 text-center">
+      Aucun niveau en philosophie n’est requis pour consulter un philosophe.
+    </p>
+    <br />
+    <p class="font-medium text-lg text-center md:text-justify hyphens-auto text-secondary pb-10">
+      La Philosophie ne pose pas de diagnostic et ne guérit d’aucune maladie. Elle peut cependant
+      dissiper la souffrance ou l’embarras qui peuvent être générés par des raisonnements abandonnés
+      ou malmenés, le doute et la remise en question permanente.
+    </p>
+    <div class="grid
+      grid-cols-1
+      lg:grid-cols-3
+      gap-5">
+      <!-- Card 1 -->
+      <div class="col-span-1">
+        <div
+          class="text-secondary border-2 md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none /70"
+        >
+          <h3 class="lg:text-3xl text-2xl text-center font-medium pt-2 lg:h-[9vh]">Particuliers</h3>
+
+          <details class="group">
+            <summary class="flex cursor-pointer justify-center [&_::-webkit-details-marker]:hidden">
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180 text-tertiary hover:text-tertiary/70"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-center md:text-justify hyphens-auto text-lg">
+                L’accompagnement philosophique a vocation à développer le discernement et
+                l’autonomie du jugement, à l’occasion des problèmes que nous rencontrons tout au
+                long de notre vie. Les questionnements existentiels, ruminations et autres « prises
+                de tête » sont bienvenus et attendu en entretien philosophique. Ils y seront pris au
+                sérieux, traités avec respect et analysés avec soin.<br /> Tarif séance : 70€ <br
+                />Tarif étudiant : 50€ <br />Durée séance : 45mn
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-span-1">
+        <div
+          class="text-secondary border-2 md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none"
+        >
+          <h3 class="lg:text-3xl text-2xl text-center font-medium pt-2 lg:h-[9vh]">
+            Professionnels en position d'autorité
+          </h3>
+
+          <details class="group">
+            <summary
+              class="flex cursor-pointer items-end justify-center [&_::-webkit-details-marker]:hidden"
+            >
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180 text-tertiary hover:text-tertiary/70"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-center md:text-justify hyphens-auto text-lg">
+                Enseignants, professionnels du soin psychique, chefs d’équipes, … Dès lors qu’il
+                s’agit de concilier une posture d’autorité, de la légitimité, conjointement aux
+                enjeux spécifiques de la fonction exercée, la méthodologie de la philosophie
+                constitue un repère d’arbitrage. Spécialisée en raisonnements complexes, elle sait
+                intégrer une dimension éthique, et penser la multiplicité des paramètres en jeu avec
+                rigueur.<br /> Tarif séance : 80€
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-span-1">
+        <div
+          class="text-secondary border-2 md:hover:scale-105 transition-transform duration-300 rounded-xl md:rounded-none"
+        >
+          <h3 class="lg:text-3xl text-2xl text-center font-medium pt-2 lg:h-[9vh]">
+            Intervention en entreprise
+          </h3>
+
+          <details class="group">
+            <summary class="flex cursor-pointer justify-center [&_::-webkit-details-marker]:hidden">
+              <svg
+                class="w-15 h-15 transition-transform duration-300 group-open:-rotate-180 text-tertiary hover:text-tertiary/70"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </summary>
+
+            <div class="px-5 pb-5">
+              <p class="font-light font-opensans text-center md:text-justify hyphens-auto text-lg">
+                Le Philosophe praticien est un « dialecticien ». Plus simplement, il est spécialiste
+                des dialogues entre des parties qui ne se comprennent pas. Il peut donc intervenir
+                en situation de conflits, que ce soit pour mieux les analyser, conseiller en
+                arbitrage, ou participer à la médiatisation de la parole. De façon plus
+                consensuelle, il initie également au raisonnement critique, et peut participer à
+                l’analyse de pratiques.<br />Tarif : sur devis
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="scroll-mt-20 container pt-20" id="presentation">
+    <h2
+      class="text-center md:text-left text-3xl lg:text-4xl font-medium text-secondary pb-5 md:pt-0"
+    >
+      Présentation
+    </h2>
+    <div class="md:grid-cols-3 grid gap-5">
+      <Image
+        src={melissa}
+        alt="Melissa Laroueg"
+        title="Moi"
+        class="md:col-span-1 md:col-start-3 rounded-xl md:rounded-none md:h-[calc(100dvh-90px)] w-full object-cover md:object-bottom"
+      />
+      <p
+        class="border-2 md:col-start-1 md:row-start-1 rounded-xl md:rounded-none text-secondary font-medium md:py-25 md:px-15 p-5 font-opensans md:col-span-2 md:text-justify hyphens-auto text-center text-lg overflow-y-auto"
+      >
+        Au cours de plus de 7 ans d’études en sciences humaines, j’ai d’abord engagé une double
+        licence en psychologie et en philosophie. Cet environnement scientifique m’a également
+        permis de croiser d’autres approches théoriques de l’être humain. Si elles sont toutes
+        éclairantes, c’est la philosophie qui m’a convaincu de son pouvoir émancipateur. J’ai donc
+        choisi de poursuivre la Philosophie jusqu’en Master.<br />
+        <br />
+        Ouvrir un cabinet de Philosophie Pratique m’a rapidement traversé l’esprit, mais j’ai d’abord
+        choisi la voie classique ; l’enseignement en Terminale quelques années d’abord, puis à l’Université,
+        où j’ai travaillé pendant 6 ans sur des outils de raisonnements spécifiques, d’analyse critiquez
+        et d’autonomisation du jugement. Partout, j’ai observé les effets de l’absence de cette formation
+        critique sur nos jugements, et l’effet de nos jugements sur ce qui nous affecte. J’ai continué
+        d’enseigner la théorie, mais j’ai enfin ouvert mon cabinet de Philosophie Pratique. <br />
+        <br />
+        Depuis 2019, je reçois des étudiants en consultation, mais également toute personne qui souhaite
+        prendre du recul sur des problématiques qui l’affectent, au moyen d’une méthode rigoureuse, bienveillante,
+        et surtout applicable.
+      </p>
+    </div>
+  </section>
+  <section class="w-full bg-secondary md:h-[35vh] flex flex-col justify-center mt-10 container">
+    <h2 class="text-center text-3xl md:text-4xl text-white font-medium py-5">Contactez-moi</h2>
+    <p class="text-center text-white font-light font-opensans">
+      N’hésitez pas à réserver un créneau, je répondrai à toutes vos questions avec plaisir.
+    </p>
+    <div class="text-center border-secondary py-10">
+      <a
+        href="contact"
+        class="px-15 py-3 bg-tertiary text-white border-primary hover:bg-tertiary/70 border-2 font-medium font-opensans transition-colors duration-300 text-lg"
+      >
+        Me contacter
+      </a>
+    </div>
+  </section>
+  <div class="relative w-full h-[30vh]">
+    <iframe
+      src="https://www.google.com/maps?q=27+Rue+d'Alsace+Lorraine,+31000+Toulouse&output=embed"
+      title="Map gps - adresse de Melissa Laroueg pour consultation"
+      class="w-full h-full"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</Layout>
