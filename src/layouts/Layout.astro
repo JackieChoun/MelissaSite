@@ -35,28 +35,28 @@ const fullTitle = title
 </html>
 
 <script>
-  // Gestion du menu de navigation pour souligner la section active
+  // Navigation active (soulignement du lien actif)
   const path = window.location.pathname;
+  const navLinks = document.querySelectorAll<HTMLAnchorElement>('nav a');
 
-  if (path === '/contact') {
-    const contactLink = document.querySelector('nav a[href="/contact"]');
-    contactLink?.classList.add('underline', 'underline-offset-4', 'decoration-tertiary');
+  if (path !== '/') {
+    navLinks.forEach((link) => {
+      if (link.getAttribute('href') === path) {
+        link.classList.add('underline', 'underline-offset-4', 'decoration-tertiary');
+      }
+    });
   }
 
   const sections = document.querySelectorAll('section[id]');
 
   function onScroll() {
     let current = '';
-
     sections.forEach((section) => {
       const rect = section.getBoundingClientRect();
       if (rect.top <= 150 && rect.bottom >= 150) {
         current = section.id;
       }
     });
-
-    const navLinks = document.querySelectorAll<HTMLAnchorElement>('nav a');
-
     navLinks.forEach((link) => {
       link.classList.remove('underline', 'underline-offset-4', 'decoration-tertiary');
       if (link.dataset.link === current) {
@@ -65,45 +65,35 @@ const fullTitle = title
     });
   }
 
-  if (window.location.pathname === '/' && sections.length) {
+  if (path === '/' && sections.length) {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
   }
 
-  // pour le premier chargement
-
-  // Gestion de l'accordéon pour n'ouvrir qu'une seule card à la fois
+  // Accordéon
   document.addEventListener('DOMContentLoaded', () => {
     const allDetails = document.querySelectorAll('details');
-
     allDetails.forEach((details) => {
       details.addEventListener('toggle', () => {
         if (details.open) {
-          // Fermer toutes les autres cards
           allDetails.forEach((other) => {
             if (other !== details && other.open) {
               other.open = false;
             }
           });
-
-          // Scroll automatique vers la partie texte
-          const content = details.querySelector('div'); // première div interne
+          const content = details.querySelector('div');
           if (content) {
             setTimeout(() => {
-              content.scrollIntoView({
-                behavior: 'smooth',
-                block: 'end',
-              });
-            }, 100); // délai pour laisser l'animation s'ouvrir
+              content.scrollIntoView({ behavior: 'smooth', block: 'end' });
+            }, 100);
           }
         }
       });
     });
   });
 
-  // Gestion de l'affichage du logo dans le header au scroll sur mobile
+  // Logo mobile au scroll
   const headerBrand = document.getElementById('header-brand');
-
   if (headerBrand instanceof HTMLElement && window.innerWidth < 768) {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 150) {
