@@ -36,7 +36,7 @@ const fullTitle = title
 
 <script>
   // Navigation active (soulignement du lien actif)
-  const path = window.location.pathname;
+  const path = window.location.pathname.replace(/\/$/, '');
   const navLinks = document.querySelectorAll<HTMLAnchorElement>('nav a');
 
   if (path !== '/') {
